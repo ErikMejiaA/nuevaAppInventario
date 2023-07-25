@@ -5,8 +5,8 @@ namespace Core.Entities;
 public class Region : BaseEntityA
 {
     //Definimos los atribuctos de cada una de las entidades
-    public string ? nombreRegion { get; set; }
-    public string ? codEstado { get; set; }
+    public string ? NombreRegion { get; set; }
+    public string ? CodEstado { get; set; }
 
     //Definimos una referencia a la entidad Estado
     public Estado ? Estado { get; set;}

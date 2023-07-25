@@ -16,17 +16,17 @@ public class EstadoConfiguration : IEntityTypeConfiguration<Estado>
         .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
         .HasMaxLength(3);
 
-        builder.Property(p => p.nombreEstado)
+        builder.Property(p => p.NombreEstado)
         .IsRequired()
         .HasMaxLength(50);
 
-        builder.HasIndex(p => p.nombreEstado)
+        builder.HasIndex(p => p.NombreEstado)
         .IsUnique();
 
         //Añadimos la llave FOREIGN KEY
         builder.HasOne(p => p.Pais)
         .WithMany(p => p.Estados)
-        .HasForeignKey(p => p.codPais)
+        .HasForeignKey(p => p.CodPais)
         .IsRequired();
         
     }

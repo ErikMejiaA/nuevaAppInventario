@@ -19,12 +19,16 @@ public class EstadoRepository : GenericRepositoryA<Estado>, IEstadoInterface
 
     public override async Task<IEnumerable<Estado>> GetAllAsync()
     {
-        return await _context.Set<Estado>().ToListAsync();
+        return await _context.Set<Estado>()
+        .Include(p => p.Regiones)
+        .ToListAsync();
     }
 
     public override async Task<Estado> GetByIdAsync(string id)
     {
-        return await _context.Set<Estado>().FindAsync(id);
+        return await _context.Set<Estado>()
+        .Include(p => p.Regiones)
+        .FirstOrDefaultAsync(p => p.IdCodigo == id);
     }
 
 }

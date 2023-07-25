@@ -2,6 +2,7 @@ using System.Reflection;
 using API.Extensions;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using AspNetCoreRateLimit;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,8 @@ builder.Services.AddAutoMapper(Assembly.GetEntryAssembly()); //Cargad de los ser
 builder.Services.AddControllers();
 builder.Services.ConfigureCors();  //servicio de los Cors 
 builder.Services.AddAplicacionServices(); //definir las interfaces y repositorios
+builder.Services.ConfigureRateLimiting(); //habilitar la configuracion para un numero n de peticiones 
+builder.Services.ConfigureApiVersioning(); //control de versiones de la Appis 
 
 //Confuguracion a la base de datos 
 builder.Services.AddDbContext<nuevaAppInventarioContext>(optionsBuilder =>
@@ -51,6 +54,7 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
+app.UseIpRateLimiting();
 
 app.UseCors("CorsPolicy");
 

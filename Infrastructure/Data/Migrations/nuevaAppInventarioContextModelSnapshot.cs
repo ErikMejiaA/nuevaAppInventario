@@ -26,20 +26,20 @@ namespace Infrastructure.Data.Migrations
                         .HasColumnType("varchar(3)")
                         .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("codPais")
+                    b.Property<string>("CodPais")
                         .IsRequired()
                         .HasColumnType("varchar(3)");
 
-                    b.Property<string>("nombreEstado")
+                    b.Property<string>("NombreEstado")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
                     b.HasKey("IdCodigo");
 
-                    b.HasIndex("codPais");
+                    b.HasIndex("CodPais");
 
-                    b.HasIndex("nombreEstado")
+                    b.HasIndex("NombreEstado")
                         .IsUnique();
 
                     b.ToTable("Estados", (string)null);
@@ -52,14 +52,14 @@ namespace Infrastructure.Data.Migrations
                         .HasColumnType("varchar(3)")
                         .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("nombrePais")
+                    b.Property<string>("NombrePais")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
                     b.HasKey("IdCodigo");
 
-                    b.HasIndex("nombrePais")
+                    b.HasIndex("NombrePais")
                         .IsUnique();
 
                     b.ToTable("Paises", (string)null);
@@ -159,20 +159,20 @@ namespace Infrastructure.Data.Migrations
                         .HasColumnType("varchar(3)")
                         .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("codEstado")
+                    b.Property<string>("CodEstado")
                         .IsRequired()
                         .HasColumnType("varchar(3)");
 
-                    b.Property<string>("nombreRegion")
+                    b.Property<string>("NombreRegion")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
                     b.HasKey("IdCodigo");
 
-                    b.HasIndex("codEstado");
+                    b.HasIndex("CodEstado");
 
-                    b.HasIndex("nombreRegion")
+                    b.HasIndex("NombreRegion")
                         .IsUnique();
 
                     b.ToTable("Regiones", (string)null);
@@ -198,7 +198,7 @@ namespace Infrastructure.Data.Migrations
                 {
                     b.HasOne("Core.Entities.Pais", "Pais")
                         .WithMany("Estados")
-                        .HasForeignKey("codPais")
+                        .HasForeignKey("CodPais")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -247,7 +247,7 @@ namespace Infrastructure.Data.Migrations
                 {
                     b.HasOne("Core.Entities.Estado", "Estado")
                         .WithMany("Regiones")
-                        .HasForeignKey("codEstado")
+                        .HasForeignKey("CodEstado")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

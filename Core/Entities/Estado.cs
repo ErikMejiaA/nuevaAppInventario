@@ -5,8 +5,8 @@ namespace Core.Entities;
 public class Estado : BaseEntityA
 {
     //Definimos los atribuctos de cada una de las entidades
-    public string ? nombreEstado { get; set; }
-    public string ? codPais { get; set; }
+    public string ? NombreEstado { get; set; }
+    public string ? CodPais { get; set; }
 
     //Definimos sus ICollection
     public ICollection<Region> ? Regiones { get; set; }

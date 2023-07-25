@@ -5,12 +5,14 @@ using System.Threading.Tasks;
 
 namespace API.Dtos
 {
-    public class EstadoDto
+    public class RegionDto
     {
         //Definimos los atribuctos de cada una de las entidades
         public string ? IdCodigo { get; set; }
-        public string ? NombreEstado { get; set; }
+        public string ? NombreRegion { get; set; }
 
-        public List<RegionDto> ? Regiones { get; set; }
+        //definimos una List<>
+        //public List<PersonaDto> ? Personas { get; set; }
+        
     }
 }

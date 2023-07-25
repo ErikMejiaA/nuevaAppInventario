@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Infrastructure.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreateUno : Migration
+    public partial class InitialCreateDos : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -20,7 +20,7 @@ namespace Infrastructure.Data.Migrations
                 {
                     IdCodigo = table.Column<string>(type: "varchar(3)", maxLength: 3, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    nombrePais = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                    NombrePais = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
@@ -70,17 +70,17 @@ namespace Infrastructure.Data.Migrations
                 {
                     IdCodigo = table.Column<string>(type: "varchar(3)", maxLength: 3, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    nombreEstado = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                    NombreEstado = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    codPais = table.Column<string>(type: "varchar(3)", nullable: false)
+                    CodPais = table.Column<string>(type: "varchar(3)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Estados", x => x.IdCodigo);
                     table.ForeignKey(
-                        name: "FK_Estados_Paises_codPais",
-                        column: x => x.codPais,
+                        name: "FK_Estados_Paises_CodPais",
+                        column: x => x.CodPais,
                         principalTable: "Paises",
                         principalColumn: "IdCodigo",
                         onDelete: ReferentialAction.Cascade);
@@ -93,17 +93,17 @@ namespace Infrastructure.Data.Migrations
                 {
                     IdCodigo = table.Column<string>(type: "varchar(3)", maxLength: 3, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    nombreRegion = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                    NombreRegion = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    codEstado = table.Column<string>(type: "varchar(3)", nullable: false)
+                    CodEstado = table.Column<string>(type: "varchar(3)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Regiones", x => x.IdCodigo);
                     table.ForeignKey(
-                        name: "FK_Regiones_Estados_codEstado",
-                        column: x => x.codEstado,
+                        name: "FK_Regiones_Estados_CodEstado",
+                        column: x => x.CodEstado,
                         principalTable: "Estados",
                         principalColumn: "IdCodigo",
                         onDelete: ReferentialAction.Cascade);
@@ -172,20 +172,20 @@ namespace Infrastructure.Data.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Estados_codPais",
+                name: "IX_Estados_CodPais",
                 table: "Estados",
-                column: "codPais");
+                column: "CodPais");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Estados_nombreEstado",
+                name: "IX_Estados_NombreEstado",
                 table: "Estados",
-                column: "nombreEstado",
+                column: "NombreEstado",
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Paises_nombrePais",
+                name: "IX_Paises_NombrePais",
                 table: "Paises",
-                column: "nombrePais",
+                column: "NombrePais",
                 unique: true);
 
             migrationBuilder.CreateIndex(
@@ -210,14 +210,14 @@ namespace Infrastructure.Data.Migrations
                 column: "IdPersona");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Regiones_codEstado",
+                name: "IX_Regiones_CodEstado",
                 table: "Regiones",
-                column: "codEstado");
+                column: "CodEstado");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Regiones_nombreRegion",
+                name: "IX_Regiones_NombreRegion",
                 table: "Regiones",
-                column: "nombreRegion",
+                column: "NombreRegion",
                 unique: true);
         }
 

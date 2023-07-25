@@ -16,11 +16,11 @@ public class PaisConfiguration : IEntityTypeConfiguration<Pais>
         .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
         .HasMaxLength(3);
 
-        builder.Property(p => p.nombrePais)
+        builder.Property(p => p.NombrePais)
         .IsRequired()
         .HasMaxLength(50);
 
-        builder.HasIndex(p => p.nombrePais)
+        builder.HasIndex(p => p.NombrePais)
         .IsUnique();
     }
 }

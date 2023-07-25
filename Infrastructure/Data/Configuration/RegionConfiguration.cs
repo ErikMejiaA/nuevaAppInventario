@@ -16,17 +16,17 @@ public class RegionConfiguration : IEntityTypeConfiguration<Region>
         .HasAnnotation("MySql : ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
         .HasMaxLength(3);
 
-        builder.Property(p => p.nombreRegion)
+        builder.Property(p => p.NombreRegion)
         .IsRequired()
         .HasMaxLength(50);
 
-        builder.HasIndex(p => p.nombreRegion)
+        builder.HasIndex(p => p.NombreRegion)
         .IsUnique();
 
         //Definimos la FOREIGN KEY
         builder.HasOne(p => p.Estado)
         .WithMany(p => p.Regiones)
-        .HasForeignKey(p => p.codEstado)
+        .HasForeignKey(p => p.CodEstado)
         .IsRequired();
         
     }
