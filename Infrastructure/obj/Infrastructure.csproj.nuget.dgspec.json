@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\Infrastructure\\Infrastructure.csproj": {}
+    "c:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\Core\\Core.csproj": {
+    "c:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\Core\\Core.csproj",
+        "projectUniqueName": "c:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\Core\\Core.csproj",
+        "projectPath": "c:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\Core\\obj\\",
+        "outputPath": "c:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -57,14 +57,14 @@
         }
       }
     },
-    "C:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\Infrastructure\\Infrastructure.csproj": {
+    "c:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "c:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "c:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\Infrastructure\\obj\\",
+        "outputPath": "c:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -79,8 +79,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\Core\\Core.csproj"
+              "c:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\Core\\Core.csproj": {
+                "projectPath": "c:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\Core\\Core.csproj"
               }
             }
           }

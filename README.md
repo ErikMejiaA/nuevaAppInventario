@@ -9,5 +9,7 @@ Pero para este Nuevo Proyecto se va a implementar la aplicación de interfaces y
 1. Cosas ya realizadas:
 => se realizo el CRUD para las entidades de Pais y estado Implementando sus Dtos
 
+=> se adiciono nuevos metodos que permiten ver el numero de paginas que contiene un registro de la base de datos asi como tambien una expresion LINQ para encontrar un determinado pais (para este caso como ejemplo para la entidad pais), asi como tambien tener un control de las verciones ejecutadas para los Enpoint para las diferentes entidades
+
 2. cosa por terminar:
-=> El CRUD para las demas entidades  y la creacion de sus Dtos 
+=> El CRUD para las demas entidades  y la creacion de sus Dtos y la implementacion de las versiones y la paginacion de sus regitros. 

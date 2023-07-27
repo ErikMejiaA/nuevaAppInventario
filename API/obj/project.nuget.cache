@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eeOqc/NXaJQzQuiwquVewcWFHFnOWKPCsrFNph+ADJG6FyBqQcHKITlcPtYpCtXk5m+sg8zQB6C7vxKocCw9Tw==",
+  "dgSpecHash": "IYLwGsTnbL2kmCEY5+TffePNgE5+HKNTEuHSGCXCIq0d525D/n0y/r4i9s4Q8eyl8fFWCsWEnkCjPXR/z5o0Og==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\API\\API.csproj",
+  "projectFilePath": "c:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\aspnetcoreratelimit\\5.0.0\\aspnetcoreratelimit.5.0.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",

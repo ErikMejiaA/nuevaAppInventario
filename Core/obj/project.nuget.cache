@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gl2iaZeJmbmu3oJ3m+gllFeRL5YtlHxFVWvmIJtwUrLjyjhNM7lfoKpMOYsLYYcMkndY5CjX3fL6p+sLL385iA==",
+  "dgSpecHash": "4VlbXG73drrUe7aiBuNcsQ9YeLVVX9N3arHifd+gBSbUJlyH++HPifkPHF4HH89e15pjcMNbvTL8DcKwoceaig==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\nuevaAppInventario\\Core\\Core.csproj",
+  "projectFilePath": "/home/apolm01-032/Desktop/nuevaAppInventario/Core/Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

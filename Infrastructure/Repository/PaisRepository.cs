@@ -33,4 +33,22 @@ public class PaisRepository : GenericRepositoryA<Pais>, IPaisInterface
         .FirstOrDefaultAsync(p => p.IdCodigo == id);
     }
 
+    public override async Task<(int totalRegistros, IEnumerable<Pais> registros)> GetAllAsync(int pageIndex, int pageSize, string search)
+    {
+        var query = _context.Paises as IQueryable<Pais>;
+        if (!string.IsNullOrEmpty(search))
+        {
+            query = query.Where(p => p.NombrePais.ToLower().Contains(search));
+        }
+        var totalRegistros = await query.CountAsync();
+        var registros = await query
+                                .Include(u => u.Estados)
+                                .Skip((pageIndex - 1) * pageSize)
+                                .Take(pageSize)
+                                .ToListAsync();
+        return (totalRegistros, registros);
+    }
+
+
+
 }
